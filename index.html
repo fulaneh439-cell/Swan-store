@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWAN | Skincare & Perfumes</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      background: #fff;
+      color: #222;
+    }
+
+    .top-bar {
+      background: #171717;
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+    }
+
+    header {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6%;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 30px;
+      letter-spacing: 5px;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 42px;
+      line-height: 30px;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    nav a {
+      color: #222;
+      text-decoration: none;
+    }
+
+    .icons {
+      font-size: 20px;
+    }
+
+    .hero {
+      min-height: 480px;
+      background: linear-gradient(90deg, #eee9e4, #fafafa);
+      display: flex;
+      align-items: center;
+      padding: 60px 8%;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .small {
+      letter-spacing: 4px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 55px;
+      font-weight: normal;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #1b1b1b;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+    }
+
+    .categories {
+      display: flex;
+      gap: 20px;
+      padding: 35px 6%;
+    }
+
+    .category {
+      flex: 1;
+      min-height: 220px;
+      background: #f1eeeb;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .category h2 {
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .category p {
+      font-family: Arial, sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .category a {
+      color: #222;
+      font-family: Arial, sans-serif;
+    }
+
+    .products {
+      padding: 35px 6%;
+    }
+
+    .section-title {
+      font-size: 35px;
+      font-weight: normal;
+      margin-bottom: 25px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .product {
+      background: #f7f6f5;
+      padding-bottom: 18px;
+    }
+
+    .product-image {
+      height: 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 70px;
+    }
+
+    .product h3,
+    .product p {
+      padding: 0 15px;
+    }
+
+    .product h3 {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .product p {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .story {
+      margin: 40px 6%;
+      padding: 60px;
+      background: #eeebe7;
+    }
+
+    .story h2 {
+      font-size: 38px;
+      font-weight: normal;
+      margin: 15px 0;
+    }
+
+    .story p {
+      max-width: 550px;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    .newsletter {
+      text-align: center;
+      padding: 60px 20px;
+      background: #f5f2ef;
+    }
+
+    .newsletter h2 {
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .newsletter p {
+      font-family: Arial, sans-serif;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 14px;
+      width: 260px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      background: #181818;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    footer .footer-logo {
+      font-family: Georgia, serif;
+      font-size: 28px;
+      letter-spacing: 5px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .categories {
+        flex-direction: column;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .story {
+        padding: 35px 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    Free shipping on orders over 50 JOD ♡
+  </div>
+
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Skincare</a>
+      <a href="#">Perfumes</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="logo">
+      <span>𓆩</span>
+      SWAN
+    </div>
+
+    <div class="icons">
+      ♡　🛒
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <div class="small">SKINCARE + PERFUMES</div>
+
+      <h1>Beauty in<br>Every Detail</h1>
+
+      <p>Care for your skin, a scent for your story.</p>
+
+      <a class="button" href="#">Shop Now →</a>
+    </div>
+  </section>
+
+  <section class="categories">
+
+    <div class="category">
+      <h2>Skincare</h2>
+      <p>Healthy skin. Lasting glow.</p>
+      <a href="#">Explore →</a>
+    </div>
+
+    <div class="category">
+      <h2>Perfumes</h2>
+      <p>More than a scent, it's you.</p>
+      <a href="#">Explore →</a>
+    </div>
+
+  </section>
+
+  <section class="products">
+
+    <h2 class="section-title">Featured Products</h2>
+
+    <div class="product-grid">
+
+      <div class="product">
+        <div class="product-image">🧴</div>
+        <h3>Hydrating Face Cream</h3>
+        <p>24 JOD</p>
+      </div>
+
+      <div class="product">
+        <div class="product-image">💧</div>
+        <h3>Glow Serum</h3>
+        <p>27 JOD</p>
+      </div>
+
+      <div class="product">
+        <div class="product-image">🌸</div>
+        <h3>Blush Perfume</h3>
+        <p>38 JOD</p>
+      </div>
+
+      <div class="product">
+        <div class="product-image">✨</div>
+        <h3>Ocean Perfume</h3>
+        <p>38 JOD</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="story">
+
+    <div class="small">OUR STORY</div>
+
+    <h2>Pure Care.<br>Lasting Scents.</h2>
+
+    <p>
+      At SWAN, we believe beauty is found in simplicity.
+      Discover skincare and fragrances designed to make
+      every day feel special.
+    </p>
+
+  </section>
+
+  <section class="newsletter">
+
+    <h2>Be the First to Know</h2>
+
+    <p>Get exclusive offers and new arrivals.</p>
+
+    <input type="email" placeholder="Your email address">
+    <a class="button" href="#">Subscribe</a>
+
+  </section>
+
+  <footer>
+
+    <div class="footer-logo">SWAN</div>
+
+    <p>Skincare • Perfumes • Beauty</p>
+
+    <br>
+
+    <p>© 2026 SWAN. All rights reserved.</p>
+
+  </footer>
+
+</body>
+  </html>
